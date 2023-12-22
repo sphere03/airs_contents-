@@ -1,1 +1,112 @@
-
+[
+    {
+        "id": "001",
+        "text": "Ms. Ortega’s development team contributed ___ to the successful launch of the newest mobile application.",
+        "options": {
+            "A": "automatically",
+            "B": "substantially",
+            "C": "sharply",
+            "D": "accordingly"
+        },
+        "answer": "B"
+    },
+    {
+        "id": "002",
+        "text": "In order to meet production targets, inspection equipment that breaks down easily should be checked on a ____ basis.",
+        "options": {
+            "A": "regular",
+            "B": "regularly",
+            "C": "regularize",
+            "D": "regularity"
+        },
+        "answer": "A"
+    },
+    {
+        "id": "003",
+        "text": "____ you experience any problems with the building’s equipment, you should contact the property manager.",
+        "options": {
+            "A": "Because of",
+            "B": "In case of",
+            "C": "Immediately",
+            "D": "If"
+        },
+        "answer": "D"
+    },
+    {
+        "id": "004",
+        "text": "Employees must park in the ____ parking lot until the renovation of the company building is completed.",
+        "options": {
+            "A": "frequent",
+            "B": "generous",
+            "C": "complicated",
+            "D": "temporary"
+        },
+        "answer": "D"
+    },
+    {
+        "id": "005",
+        "text": "Although the assembly machine has been used for more than 20 years, it is still ____.",
+        "options": {
+            "A": "annual",
+            "B": "experienced",
+            "C": "operational",
+            "D": "previous"
+        },
+        "answer": "C"
+    },
+    {
+        "id": "006",
+        "text": "Medical ____ are supposed to investigate the characteristics and effects of newly developed materials.",
+        "options": {
+            "A": "expert",
+            "B": "expertise",
+            "C": "experts",
+            "D": "expertly"
+        },
+        "answer": "C"
+    },
+    {
+        "id": "007",
+        "text": "Darwin Construction, renowned for its ____ designs, has won the bid for the Dalton City Library.",
+        "options": {
+            "A": "innovation",
+            "B": "innovate",
+            "C": "innovatively",
+            "D": "innovative"
+        },
+        "answer": "D"
+    },
+    {
+        "id": "008",
+        "text": "Please make sure that ____ address is correct in the designated section of the order form.",
+        "options": {
+            "A": "yours",
+            "B": "yourself",
+            "C": "your",
+            "D": "you"
+        },
+        "answer": "C"
+    },
+    {
+        "id": "009",
+        "text": "Mr. Thompson was ____ as the marketing director after a successful market development in Asia.",
+        "options": {
+            "A": "appointing",
+            "B": "appointed",
+            "C": "appoint",
+            "D": "appoints"
+        },
+        "answer": "B"
+    },
+    {
+        "id": "010",
+        "text": "The Irwin City Tourist Information Office is ____ located in the center of the city.",
+        "options": {
+            "A": "particularly",
+            "B": "unfortunately",
+            "C": "absolutely",
+            "D": "conveniently"
+        },
+        "answer": "D"
+    }
+]
