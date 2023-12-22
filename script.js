@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadQuestions('set-001-010.json');
+    loadQuestions('question/001-010.json');
 });
 
 function loadQuestions(file) {
