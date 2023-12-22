@@ -3,6 +3,8 @@ body {
     background: #f8f8f8;
     color: #333;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -11,42 +13,38 @@ body {
     overflow: hidden;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
+    margin: 20px 0;
+}
+
+#list-container {
+    list-style: none;
+    padding: 0;
+}
+
+#list-container li {
+    margin: 10px 0;
+}
+
+#list-container li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.question-item {
     margin-bottom: 20px;
 }
 
-#list-container button {
-    padding: 10px;
-    margin: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-#list-container button:hover {
-    background-color: #0056b3;
-    cursor: pointer;
-}
-
-/* 問題と選択肢のスタイル */
-.question {
-    margin-bottom: 20px;
-}
-
-.options button {
-    padding: 5px 10px;
-    margin-right: 10px;
+.options li {
     background-color: #f4f4f4;
+    padding: 5px 10px;
+    margin-top: 5px;
     border: 1px solid #ddd;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.options button:hover {
+.options li:hover {
     background-color: #e9e9e9;
 }
-
-/* その他のスタイル定義 */
-
