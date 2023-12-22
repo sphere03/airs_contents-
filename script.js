@@ -1,54 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 問題を表示するコンテナの取得
-    const questionContainer = document.getElementById('question-container');
+    loadQuestions('set-001-010.json');
+});
 
-    // 問題セットをロードする関数
-    function loadQuestionSet(setId) {
-        // JSONファイルから問題セットを非同期に取得
-        fetch(`questions/${setId}.json`)
+function loadQuestions(file) {
+    fetch(file)
         .then(response => response.json())
-        .then(data => {
-            displayQuestions(data); // 問題を表示
-        }).catch(error => {
-            console.error('Error loading questions:', error);
-        });
-    }
-
-    // 問題を表示する関数
-    function displayQuestions(questions) {
-        // コンテナの中身をクリア
-        questionContainer.innerHTML = '';
-        // 問題ごとにHTMLを生成
-        questions.forEach(question => {
-            const questionHTML = `
-                <div class="question">
+        .then(questions => {
+            const questionsContainer = document.getElementById('questions-container');
+            questions.forEach(question => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question-item';
+                questionDiv.innerHTML = `
                     <p>${question.text}</p>
-                    <div class="options">
-                        ${Object.keys(question.options).map(option => `
-                            <button onclick="selectOption('${option}', '${question.id}')">${option}: ${question.options[option]}</button>
+                    <ul class="options">
+                        ${question.options.map((option, index) => `
+                            <li data-answer="${String.fromCharCode(65 + index)}">${String.fromCharCode(65 + index)}) ${option}</li>
                         `).join('')}
-                    </div>
-                </div>
-            `;
-            questionContainer.innerHTML += questionHTML;
+                    </ul>
+                `;
+                questionsContainer.appendChild(questionDiv);
+            });
+            attachOptionListeners();
+        })
+        .catch(error => {
+            console.error('Error loading the question set:', error);
         });
-        // 問題コンテナを表示
-        questionContainer.style.display = 'block';
-    }
+}
 
-    // 選択肢が選ばれたときの処理
-    window.selectOption = function(selectedOption, questionId) {
-        // ここで選択肢の正誤を判断
-        console.log(`Selected option: ${selectedOption} for question ID: ${questionId}`);
-        // 正解なら「完璧」、不正解なら「不正解」の表示を切り替える処理をここに書く
-    }
-
-    // ボタンにイベントリスナーを設定
-    const buttons = document.querySelectorAll('#list-container button');
-    buttons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const setId = e.target.textContent.trim();
-            loadQuestionSet(setId);
+function attachOptionListeners() {
+    const options = document.querySelectorAll('.options li');
+    options.forEach(option => {
+        option.addEventListener('click', (e) => {
+            const selectedOption = e.target.dataset.answer;
+            const parentQuestion = e.target.closest('.question-item');
+            checkAnswer(selectedOption, parentQuestion);
         });
     });
-});
+}
+
+function checkAnswer(selectedOption, questionDiv) {
+    // ユーザーの回答をチェックするロジックをここに実装
+    alert(`You selected: ${selectedOption}`);
+}
